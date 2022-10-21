@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="icon" type="image/x-icon" href=" {{ url_for('static', filename='Images/Logo.png') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/user.css') }}">
+</head>
+<body background="{{ url_for('static', filename='Images/background.png') }}">
+    {% for dataa in User%}  
+        {% if username == dataa.username %}
+            <div class="container">
+                <div class="cover-photo">
+                <img src="{{ url_for('static', filename='Images/Logo.png') }}" class="profile">
+                </div>
+                <div class="profile-name">{{username}}<br> ({{dataa.first_name}} {{dataa.last_name}})</div>
+                <p class="about">Country: {{dataa.country}} <br> Correct: {{dataa.correct}}<br> Incorrect: {{dataa.incorrect_times}} </p>
+                {% if dataa.correct != 0 %}
+                <p class="about">% CORRECT = {{(dataa.correct / (dataa.correct + dataa.incorrect_times) * 100)|round(2)}} %</p>
+                <p class="about">% INCORRECT = {{(dataa.incorrect_times / (dataa.correct + dataa.incorrect_times) * 100)|round(2)}} %</p>
+                {% endif %}
+                <button class="msg-btn" ><a href=mailto:{{dataa.email}} style="color: white;">EMAIL</a></button>
+                
+                <div>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+                </div>
+                <button onclick="window.print()" class="msg-btn">Print {{dataa.username}} Statistics</button>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+            
+
+    <button class="msg-btn" style="text-align: center; font-size:x-large;"><a href="/home" style="color: white;">RETURN TO HOMEPAGE</a></button>
+</body>
+</html>

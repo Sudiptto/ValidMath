@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User DNE</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+    ">
+    <link rel="icon" type="image/x-icon" href=" {{ url_for('static', filename='Images/Logo.png') }} ">
+</head>
+<body background="{{ url_for('static', filename='Images/background.png') }}">
+    
+    <section class="header">
+        <nav>
+            <a href="/home"><img class="logo-img" src="{{url_for('static', filename='Images/Logo.png')}}" width="120" height="120" ALT="align box" ALIGN=CENTER  margin="0px" padding="0px"></a>
+               <div class="nav-links">
+                   <ul>
+                       <li><a href="/home">Home</a></li>
+                       <li><a href="/about">About</a></li>
+                       <li><a href="/contact">Contact</a></li>
+                       <li><a href="/problems">Problems</a></li>
+                       <li><a href="/logout">Logout</a></li>
+                   </ul>
+   
+               </div>
+           </nav> 
+    
+    <div class="info">
+       <h1>USER DOES NOT EXIST (DNE WARNING)</h1>
+       <h3>TRY A DIFFERENT USER</h3>
+    </div>
+    <div class="loader"></div>
+    
+     </section>
+    </section>
+    <!-- TO make website responsive, for toggle menu!-->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+    
+        function showMenu(){
+            navLinks.style.right = "0";
+            document.getElementById("response").innerHTML = "Swipe Right (Mobile Users!)";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    
+    </script>
+</body>
+</html>
