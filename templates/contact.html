@@ -25,20 +25,18 @@
    
                </div>
            </nav> 
-        <h1 style="border: 2px solid orange; padding: 10px; background-color: orange; text-align: center;" class = "animation"> CONTACT</h1>
+        <h1 style="border: 2px solid white; padding: 10px; background-color: black; text-align: center;" class = "animation"> CONTACT</h1>
         <div class = "contact-title">
-            <h2 style="text-align: center;"><mark>WE WILL HELP</mark></h2>
-            <h3><mark>DOES NOT WORK AS OF YET PLEASE EMAIL: contactdmanswers@gmail.com. If you have issues or want new updates send an EMAIL!</mark></h3>
-        </div>
-        <div class="contact-form">
-            <form id="contact-form" method="post" action="contactFormHandler.php">
-                <input name="name" type="text" class="form-control" placeholder="Your Name" required>
-                <br>
-                <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-                <br>
-                    <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea> <br>
-                    <input type="submit" class="form-control submit" value="SEND MESSAGE">
+             
+        <form action="mailto:contactdmanswers@gmail.com" method="post" enctype="text/plain">
+            <h3 style="color: white; font:bolder" class="contact_input">Name</h3><br>
+            <input type="text" name="name" required><br>
+            <h3 style="color: white; font:bolder" class="contact_input">Email</h3><br>
+            <input type="email" name="mail" required><br>
+            <h3 style="color: white; font:bolder" class="contact_input">Message</h3><br>
+            <input type="text" name="comment" size="80" required><br><br>
+            <input type="submit" value="Send" class="hero-btn">
+            <input type="reset" value="Reset" class="hero-btn">
             </form>
-        </div>
     </head>
 </html>
