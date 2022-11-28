@@ -6,6 +6,7 @@ Create a virtual enviornment and redirect to
 Download everything in the requirements.txt by doing, pip install -r requirements. txt
 Do python valid_math.py in terminal to start server
 
-
+Website: https://validmath100.pythonanywhere.com/
 View Demo Video: https://youtu.be/wBWOpEilaW8
 Static Website: https://validmath.netlify.app/
+
